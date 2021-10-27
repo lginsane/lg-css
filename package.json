@@ -4,10 +4,17 @@
   "description": "css基础库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "index": "sass --watch src/index.scss:./dist/index.css --style compressed",
+    "background": "sass --watch src/background.scss:./dist/background/index.css --style compressed",
+    "color": "sass --watch src/color.scss:./dist/color/index.css --style compressed",
+    "layout": "sass --watch src/layout.scss:./dist/layout/index.css --style compressed",
+    "reset": "sass --watch src/reset.scss:./dist/reset/index.css --style compressed",
+    "shadow": "sass --watch src/shadow.scss:./dist/shadow/index.css --style compressed",
+    "size": "sass --watch src/size.scss:./dist/size/index.css --style compressed",
+    "text": "sass --watch src/text.scss:./dist/text/index.css --style compressed"
   },
   "repository": "git+https://github.com/lginsane/lg-css.git",
   "author": "lginsane",
@@ -18,5 +25,8 @@
   "homepage": "https://github.com/lginsane/lg-css#readme",
   "devDependencies": {
     "vitepress": "^0.20.0"
+  },
+  "dependencies": {
+    "sass": "^1.43.4"
   }
 }
