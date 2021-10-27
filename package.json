@@ -1,0 +1,22 @@
+{
+  "name": "lg-css",
+  "version": "0.0.1",
+  "description": "css基础库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "repository": "git+https://github.com/lginsane/lg-css.git",
+  "author": "lginsane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lginsane/lg-css/issues"
+  },
+  "homepage": "https://github.com/lginsane/lg-css#readme",
+  "devDependencies": {
+    "vitepress": "^0.20.0"
+  }
+}
