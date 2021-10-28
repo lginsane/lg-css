@@ -102,16 +102,12 @@
     flex-wrap: nowrap;
 }
 
-.flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
+.flex-shrink-0 {
+    flex-shrink: 0;
 }
 
-.flex-column-reverse {
-    flex-direction: column-reverse;
-}
-
-.flex-row-reverse {
-    flex-direction: row-reverse;
+.flex-grow-1 {
+    flex-grow: 1;
 }
 
 .justify-start {
