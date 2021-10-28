@@ -74,19 +74,19 @@
 
 @each $i in $padding-size {
     .pt#{$i} {
-        margin-top: #{$i}px !important;
+        padding-top: #{$i}px !important;
     }
 
     .pr#{$i} {
-        margin-right: #{$i}px !important;
+        padding-right: #{$i}px !important;
     }
 
     .pb#{$i} {
-        margin-bottom: #{$i}px !important;
+        padding-bottom: #{$i}px !important;
     }
 
     .pl#{$i} {
-        margin-left: #{$i}px !important;
+        padding-left: #{$i}px !important;
     }
 }
 
@@ -110,7 +110,7 @@
 ------------------------------- */
 @each $i in $width-percent {
     .width-#{$i} {
-        width: #{$i}px !important;
+        width: #{$i}#{'%'} !important;
     }
 }
 
@@ -118,6 +118,6 @@
 ------------------------------- */
 @each $i in $height-percent {
     .height-#{$i} {
-        height: #{$i}px !important;
+        height: #{$i}#{'%'} !important;
     }
 }
