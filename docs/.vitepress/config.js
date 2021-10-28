@@ -1,6 +1,7 @@
 module.exports = {
     title: 'LG CSS',
     description: 'Just playing around.',
+    base: '/lg-css-docs/dist/',
     themeConfig: {
         repo: 'lginsane/lg-css',
         docsDir: 'docs',
