@@ -1,4 +1,5 @@
 @import "./var.scss";
+@import "./mixin.scss";
 
 /* 字体大小全局样式
 ------------------------------- */
@@ -10,11 +11,7 @@
 
 /* 可定制字体大小全局样式
 ------------------------------- */
-@each $i in $font-size {
-    .fs#{$i} {
-        font-size: #{$i}px !important;
-    }
-}
+@include customStyle('font-size', $font-size);
 
 /* 外边距、内边距全局样式
 ------------------------------- */
@@ -62,78 +59,22 @@
 
 /* 可定制外边距、内边距全局样式
 ------------------------------- */
-@each $i in $margin-size {
-    .m#{$i} {
-        margin: #{$i}px !important;
-    }
-
-    .mt#{$i} {
-        margin-top: #{$i}px !important;
-    }
-
-    .mr#{$i} {
-        margin-right: #{$i}px !important;
-    }
-
-    .mb#{$i} {
-        margin-bottom: #{$i}px !important;
-    }
-
-    .ml#{$i} {
-        margin-left: #{$i}px !important;
-    }
-}
-
-@each $i in $padding-size {
-    .p#{$i} {
-        padding: #{$i}px !important;
-    }
-
-    .pt#{$i} {
-        padding-top: #{$i}px !important;
-    }
-
-    .pr#{$i} {
-        padding-right: #{$i}px !important;
-    }
-
-    .pb#{$i} {
-        padding-bottom: #{$i}px !important;
-    }
-
-    .pl#{$i} {
-        padding-left: #{$i}px !important;
-    }
-}
+@include customStyle('margin', $margin-size);
+@include customStyle('padding', $padding-size);
 
 /* 可定制宽度全局样式
 ------------------------------- */
-@each $i in $width-size {
-    .w#{$i} {
-        width: #{$i}px !important;
-    }
-}
+@include customStyle('width', $width-size);
 
 /* 可定制高度全局样式
 ------------------------------- */
-@each $i in $height-size {
-    .h#{$i} {
-        height: #{$i}px !important;
-    }
-}
+@include customStyle('height', $height-size);
+
 
 /* 可定制百分比宽度全局样式
 ------------------------------- */
-@each $i in $width-percent {
-    .width-#{$i} {
-        width: #{$i}#{'%'} !important;
-    }
-}
+@include customStyle('width-percent', $width-percent);
 
 /* 可定制百分比高度全局样式
 ------------------------------- */
-@each $i in $height-percent {
-    .height-#{$i} {
-        height: #{$i}#{'%'} !important;
-    }
-}
+@include customStyle('height-percent', $height-percent);

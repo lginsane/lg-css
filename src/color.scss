@@ -1,8 +1,4 @@
 @import "./var.scss";
+@import "./mixin.scss";
 
-@each $key,
-$value in $color {
-    .c-#{$key} {
-        color: $value;
-    }
-}
+@include customStyle('color', $color)

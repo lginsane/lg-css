@@ -43,3 +43,65 @@
     -webkit-line-clamp: $line;
     -webkit-box-orient: vertical;
 }
+
+$pxMap: ('font-size': fs, 'width': w, 'height': h);
+$percentMap: ('width-percent': width-, 'height-percent': height-);
+$marginMap: ('margin': m, 'margin-top': mt, 'margin-bottom': mb, 'margin-left': ml, 'margin-right': mr);
+$paddingMap: ('padding': p, 'padding-top': pt, 'padding-bottom': pb, 'padding-left': pl, 'padding-right': pr);
+$colorMap: ('background-color': bg-, 'color': c-,);
+
+$styleMap: ('width-': width, 'height-': height);
+
+@mixin customStyle($type, $list) {
+    // color/background-color
+    @if map-has-key($colorMap, $type) {
+        $prefix: map-get($colorMap, $type);
+        @each $key, $value in $list {
+            .#{$prefix}#{$key} {
+                #{$type}: #{$value} !important;
+            }
+        }
+    }
+    // margin
+    @else if $type == 'margin' {
+        @each $style, $prefix in $marginMap {
+            @each $key, $value in $list {
+                .#{$prefix}#{$key} {
+                    #{$style}: #{$value} px!important;
+                }
+            }
+        }
+    }
+    // padding
+    @else if $type == 'padding' {
+        @each $style, $prefix in $paddingMap {
+            @each $key, $value in $list {
+                .#{$prefix}#{$key} {
+                    #{$style}: #{$value} px!important;
+                }
+            }
+        }
+    }
+    // font-size/width/height
+    @else if map-has-key($pxMap, $type) {
+        $prefix: map-get($pxMap, $type);
+        @each $key in $list {
+            .#{$prefix}#{$key} {
+                #{$type}: #{$key}px !important;
+            }
+        }
+    }
+    // width-percent/height-percent
+    @else if map-has-key($percentMap, $type) {
+        $prefix: map-get($percentMap, $type);
+        $style: map-get($styleMap, $prefix);
+        @each $key in $list {
+            .#{$prefix}#{$key} {
+                #{$style}: #{$key}#{'%'} !important;
+            }
+        }
+    }
+    @else {
+        @error "传参错误";
+    }
+}
