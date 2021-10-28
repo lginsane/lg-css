@@ -1,0 +1,8 @@
+@import "./var.scss";
+
+@each $key,
+$value in $bg-color {
+    .bg-#{$key} {
+        color: $value;
+    }
+}

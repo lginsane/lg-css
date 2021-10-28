@@ -1,0 +1,74 @@
+@import "./mixin.scss";
+
+/* 对齐方式
+------------------------------- */
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tj {
+    text-align: justify;
+}
+
+/* 修饰方式
+------------------------------- */
+.strike {
+    text-decoration: line-through;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+/* 字体样式
+------------------------------- */
+.i {
+    font-style: italic;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.ti-2 {
+    text-indent: 2em;
+}
+
+/* 换行样式
+------------------------------- */
+
+.ellipsis {
+    text-overflow: ellipsis;
+}
+
+.break {
+    word-break: break-all;
+}
+
+.nowarp {
+    white-space: nowrap;
+}
+
+.th1 {
+    @include text-no-wrap;
+}
+
+.th2 {
+    @include text-ellipsis(2);
+}
+
+.th3 {
+    @include text-ellipsis(3);
+}

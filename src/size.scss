@@ -1,0 +1,123 @@
+@import "./var.scss";
+
+/* 字体大小全局样式
+------------------------------- */
+@for $i from 10 through 32 {
+    .fs#{$i} {
+        font-size: #{$i}px !important;
+    }
+}
+
+/* 可定制字体大小全局样式
+------------------------------- */
+@each $i in $font-size {
+    .fs#{$i} {
+        font-size: #{$i}px !important;
+    }
+}
+
+/* 外边距、内边距全局样式
+------------------------------- */
+@for $i from 1 through 10 {
+    .mt#{$i} {
+        margin-top: #{$i}px !important;
+    }
+
+    .mr#{$i} {
+        margin-right: #{$i}px !important;
+    }
+
+    .mb#{$i} {
+        margin-bottom: #{$i}px !important;
+    }
+
+    .ml#{$i} {
+        margin-left: #{$i}px !important;
+    }
+
+    .pt#{$i} {
+        padding-top: #{$i}px !important;
+    }
+
+    .pr#{$i} {
+        padding-right: #{$i}px !important;
+    }
+
+    .pb#{$i} {
+        padding-bottom: #{$i}px !important;
+    }
+
+    .pl#{$i} {
+        padding-left: #{$i}px !important;
+    }
+}
+
+/* 可定制外边距、内边距全局样式
+------------------------------- */
+@each $i in $margin-size {
+    .mt#{$i} {
+        margin-top: #{$i}px !important;
+    }
+
+    .mr#{$i} {
+        margin-right: #{$i}px !important;
+    }
+
+    .mb#{$i} {
+        margin-bottom: #{$i}px !important;
+    }
+
+    .ml#{$i} {
+        margin-left: #{$i}px !important;
+    }
+}
+
+@each $i in $padding-size {
+    .pt#{$i} {
+        margin-top: #{$i}px !important;
+    }
+
+    .pr#{$i} {
+        margin-right: #{$i}px !important;
+    }
+
+    .pb#{$i} {
+        margin-bottom: #{$i}px !important;
+    }
+
+    .pl#{$i} {
+        margin-left: #{$i}px !important;
+    }
+}
+
+/* 可定制宽度全局样式
+------------------------------- */
+@each $i in $width-size {
+    .w#{$i} {
+        width: #{$i}px !important;
+    }
+}
+
+/* 可定制高度全局样式
+------------------------------- */
+@each $i in $height-size {
+    .h#{$i} {
+        height: #{$i}px !important;
+    }
+}
+
+/* 可定制百分比宽度全局样式
+------------------------------- */
+@each $i in $width-percent {
+    .width-#{$i} {
+        width: #{$i}px !important;
+    }
+}
+
+/* 可定制百分比高度全局样式
+------------------------------- */
+@each $i in $height-percent {
+    .height-#{$i} {
+        height: #{$i}px !important;
+    }
+}

@@ -1,0 +1,45 @@
+/* 居中
+------------------------------- */
+@mixin center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 1px边框
+------------------------------- */
+@mixin border {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    pointer-events: none;
+    z-index: 1;
+    border: none;
+    border-width: 0;
+}
+
+/* 文本不换行
+------------------------------- */
+@mixin text-no-wrap() {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* 多行文本溢出
+  ------------------------------- */
+@mixin text-ellipsis($line: 2) {
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}

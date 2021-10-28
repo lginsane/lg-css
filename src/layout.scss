@@ -1,0 +1,205 @@
+@import "./mixin.scss";
+
+/* 元素样式
+------------------------------- */
+.db {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.di {
+    display: inline;
+}
+
+.dn {
+    display: none;
+}
+
+/* 浮动样式
+------------------------------- */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.fn {
+    float: none;
+}
+
+/* 定位样式
+------------------------------- */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.absolute-center {
+    @extend .absolute;
+    @include center;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.fixed-center {
+    @extend .fixed;
+    @include center;
+}
+
+.static {
+    position: static;
+}
+
+.sticky {
+    position: sticky;
+}
+
+/* flex 弹性布局样式
+------------------------------- */
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.flex-auto {
+    flex: 1 1 auto;
+    min-width: 0;
+    /* 1 */
+    min-height: 0;
+    /* 1 */
+}
+
+.flex-none {
+    flex: none;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-baseline {
+    align-items: baseline;
+}
+
+.items-stretch {
+    align-items: stretch;
+}
+
+.flex-center {
+    @extend .flex;
+    @extend .justify-center;
+    @extend .items-center;
+}
+
+.flex-column-center {
+    @extend .flex;
+    @extend .flex-column;
+    @extend .justify-center;
+    @extend .items-center;
+}
+
+.flex-between-center {
+    @extend .flex;
+    @extend .justify-between;
+    @extend .items-center;
+}
+
+.flex-column-between-center {
+    @extend .flex;
+    @extend .flex-column;
+    @extend .justify-between;
+    @extend .items-center;
+}
+
+.flex-around-center {
+    @extend .flex;
+    @extend .justify-around;
+    @extend .items-center;
+}
+
+.flex-column-around-center {
+    @extend .flex;
+    @extend .flex-column;
+    @extend .justify-around;
+    @extend .items-center;
+}
+
+/* 溢出样式
+------------------------------- */
+
+.oh {
+    overflow: hidden !important;
+}
+
+.oa {
+    overflow: auto !important;
+}
