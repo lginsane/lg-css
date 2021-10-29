@@ -1,8 +1,8 @@
 {
   "name": "lg-css",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "css基础库",
-  "main": "index.js",
+  "main": "dist/index.css",
   "keywords": [
       "sass",
       "vitepress",
