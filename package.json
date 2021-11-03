@@ -1,6 +1,6 @@
 {
   "name": "lg-css",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "css基础库",
   "main": "dist/index.css",
   "keywords": [

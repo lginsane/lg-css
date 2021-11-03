@@ -65,9 +65,9 @@ $styleMap: ('width-': width, 'height-': height);
     // margin
     @else if $type == 'margin' {
         @each $style, $prefix in $marginMap {
-            @each $key, $value in $list {
+            @each $key in $list {
                 .#{$prefix}#{$key} {
-                    #{$style}: #{$value} px!important;
+                    #{$style}: #{$key} px!important;
                 }
             }
         }
@@ -75,9 +75,9 @@ $styleMap: ('width-': width, 'height-': height);
     // padding
     @else if $type == 'padding' {
         @each $style, $prefix in $paddingMap {
-            @each $key, $value in $list {
+            @each $key in $list {
                 .#{$prefix}#{$key} {
-                    #{$style}: #{$value} px!important;
+                    #{$style}: #{$key} px!important;
                 }
             }
         }
