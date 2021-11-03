@@ -67,7 +67,7 @@ $styleMap: ('width-': width, 'height-': height);
         @each $style, $prefix in $marginMap {
             @each $key in $list {
                 .#{$prefix}#{$key} {
-                    #{$style}: #{$key} px!important;
+                    #{$style}: #{$key}px !important;
                 }
             }
         }
@@ -77,7 +77,7 @@ $styleMap: ('width-': width, 'height-': height);
         @each $style, $prefix in $paddingMap {
             @each $key in $list {
                 .#{$prefix}#{$key} {
-                    #{$style}: #{$key} px!important;
+                    #{$style}: #{$key}px !important;
                 }
             }
         }
