@@ -44,13 +44,11 @@
     -webkit-box-orient: vertical;
 }
 
-$pxMap: ('font-size': fs, 'width': w, 'height': h);
-$percentMap: ('width-percent': width-, 'height-percent': height-);
-$marginMap: ('margin': m, 'margin-top': mt, 'margin-bottom': mb, 'margin-left': ml, 'margin-right': mr);
-$paddingMap: ('padding': p, 'padding-top': pt, 'padding-bottom': pb, 'padding-left': pl, 'padding-right': pr);
-$colorMap: ('background-color': bg-, 'color': c-,);
-
-$styleMap: ('width-': width, 'height-': height);
+$pxMap: ('font-size': fs-, 'width': w-, 'height': h-) !default;
+$percentMap: ('width-percent': width-, 'height-percent': height-) !default;
+$marginMap: ('margin': m-, 'margin-top': mt-, 'margin-bottom': mb-, 'margin-left': ml-, 'margin-right': mr-) !default;
+$paddingMap: ('padding': p-, 'padding-top': pt-, 'padding-bottom': pb-, 'padding-left': pl-, 'padding-right': pr-) !default;
+$colorMap: ('background-color': bg-, 'color': c-) !default;
 
 @mixin customStyle($type, $list) {
     // color/background-color
@@ -94,10 +92,9 @@ $styleMap: ('width-': width, 'height-': height);
     // width-percent/height-percent
     @else if map-has-key($percentMap, $type) {
         $prefix: map-get($percentMap, $type);
-        $style: map-get($styleMap, $prefix);
         @each $key in $list {
             .#{$prefix}#{$key} {
-                #{$style}: #{$key}#{'%'} !important;
+                #{$type}: #{$key}#{'%'} !important;
             }
         }
     }

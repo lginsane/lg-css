@@ -1,10 +1,22 @@
 @import "./common/var.scss";
 @import "./common/mixin.scss";
 
+$fs-prefix: map-get($pxMap, 'font-size');
+$m-prefix: map-get($marginMap, 'margin');
+$mt-prefix: map-get($marginMap, 'margin-top');
+$mb-prefix: map-get($marginMap, 'margin-bottom');
+$ml-prefix: map-get($marginMap, 'margin-left');
+$mr-prefix: map-get($marginMap, 'margin-right');
+$p-prefix: map-get($paddingMap, 'padding');
+$pt-prefix: map-get($paddingMap, 'padding-top');
+$pb-prefix: map-get($paddingMap, 'padding-bottom');
+$pl-prefix: map-get($paddingMap, 'padding-left');
+$pr-prefix: map-get($paddingMap, 'padding-right');
+$fs-prefix: map-get($pxMap, 'font-size');
 /* 字体大小全局样式
 ------------------------------- */
 @for $i from 10 through 32 {
-    .fs#{$i} {
+    .#{$fs-prefix}#{$i} {
         font-size: #{$i}px !important;
     }
 }
@@ -16,43 +28,43 @@
 /* 外边距、内边距全局样式
 ------------------------------- */
 @for $i from 1 through 10 {
-    .m#{$i} {
+    .#{$m-prefix}#{$i} {
         margin: #{$i}px !important;
     }
 
-    .mt#{$i} {
+    .#{$mt-prefix}#{$i} {
         margin-top: #{$i}px !important;
     }
 
-    .mr#{$i} {
+    .#{$mr-prefix}#{$i} {
         margin-right: #{$i}px !important;
     }
 
-    .mb#{$i} {
+    .#{$mb-prefix}#{$i} {
         margin-bottom: #{$i}px !important;
     }
 
-    .ml#{$i} {
+    .#{$ml-prefix}#{$i} {
         margin-left: #{$i}px !important;
     }
 
-    .p#{$i} {
+    .#{$p-prefix}#{$i} {
         padding: #{$i}px !important;
     }
 
-    .pt#{$i} {
+    .#{$pt-prefix}#{$i} {
         padding-top: #{$i}px !important;
     }
 
-    .pr#{$i} {
+    .#{$pr-prefix}#{$i} {
         padding-right: #{$i}px !important;
     }
 
-    .pb#{$i} {
+    .#{$pb-prefix}#{$i} {
         padding-bottom: #{$i}px !important;
     }
 
-    .pl#{$i} {
+    .#{$pl-prefix}#{$i} {
         padding-left: #{$i}px !important;
     }
 }
