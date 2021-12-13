@@ -12,8 +12,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "build:scss": "node build/compilerScss.js",
-    "build:stylus": "node build/compilerStylus.js"
+    "build": "node build/compiler.js"
   },
   "repository": "git+https://github.com/lginsane/lg-css.git",
   "author": "lginsane",
@@ -28,6 +27,7 @@
   "dependencies": {
     "clean-css": "^5.2.2",
     "fs-extra": "^10.0.0",
+    "less": "^4.1.2",
     "sass": "^1.44.0",
     "stylus": "^0.55.0"
   }
