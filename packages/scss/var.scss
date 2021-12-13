@@ -1,9 +1,10 @@
-$color: ('000': #000000, 'fff': #ffffff);
-$bg-color: ('000': #000000, 'fff': #ffffff);
-$font-size: (40, 50, 60);
-$margin-size: (15, 20, 25, 30, 35, 40, 45, 50, 55, 60);
-$padding-size: (15, 20, 25, 30, 35, 40, 45, 50, 55, 60);
-$width-size: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200);
-$height-size: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200);
-$width-percent: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
-$height-percent: (50, 100);
+$color: ('000': #000000, 'fff': #ffffff) !default;
+$bg-color: ('000': #000000, 'fff': #ffffff) !default;
+$font-size: (40, 50, 60) !default;
+$margin-size: (15, 20, 25, 30, 35, 40, 45, 50, 55, 60) !default;
+$padding-size: (15, 20, 25, 30, 35, 40, 45, 50, 55, 60) !default;
+$width-size: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200) !default;
+$height-size: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200) !default;
+$width-percent: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100) !default;
+$height-percent: (50, 100) !default;
+
