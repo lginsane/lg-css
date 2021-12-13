@@ -1,4 +1,4 @@
-@import "./var.scss";
-@import "./mixin.scss";
+@import "./common/var.scss";
+@import "./common/mixin.scss";
 
 @include customStyle('background-color', $bg-color)
