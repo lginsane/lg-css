@@ -2,19 +2,19 @@
 
 /* 元素样式
 ------------------------------- */
-.db {
+.block {
     display: block;
 }
 
-.dib {
+.inline-block {
     display: inline-block;
 }
 
-.di {
+.inline {
     display: inline;
 }
 
-.dn {
+.none {
     display: none;
 }
 
@@ -30,6 +30,18 @@
 
 .fn {
     float: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    content: " ";
+    height: 0;
+    visibility: hidden;
+    clear: both;
 }
 
 /* 定位样式
@@ -198,4 +210,15 @@
 
 .oa {
     overflow: auto !important;
+}
+
+/* 透明度样式
+------------------------------- */
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-1 {
+    opacity: 0;
 }
