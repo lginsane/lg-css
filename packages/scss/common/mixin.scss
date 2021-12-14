@@ -50,6 +50,8 @@ $marginMap: ('margin': m-, 'margin-top': mt-, 'margin-bottom': mb-, 'margin-left
 $paddingMap: ('padding': p-, 'padding-top': pt-, 'padding-bottom': pb-, 'padding-left': pl-, 'padding-right': pr-) !default;
 $colorMap: ('background-color': bg-, 'color': c-) !default;
 
+$styleMap: ('width-': width, 'height-': height);
+
 @mixin customStyle($type, $list) {
     // color/background-color
     @if map-has-key($colorMap, $type) {
@@ -92,9 +94,10 @@ $colorMap: ('background-color': bg-, 'color': c-) !default;
     // width-percent/height-percent
     @else if map-has-key($percentMap, $type) {
         $prefix: map-get($percentMap, $type);
+        $style: map-get($styleMap, $prefix);
         @each $key in $list {
             .#{$prefix}#{$key} {
-                #{$type}: #{$key}#{'%'} !important;
+                #{$style}: #{$key}#{'%'} !important;
             }
         }
     }

@@ -12,7 +12,6 @@ $pt-prefix: map-get($paddingMap, 'padding-top');
 $pb-prefix: map-get($paddingMap, 'padding-bottom');
 $pl-prefix: map-get($paddingMap, 'padding-left');
 $pr-prefix: map-get($paddingMap, 'padding-right');
-$fs-prefix: map-get($pxMap, 'font-size');
 /* 字体大小全局样式
 ------------------------------- */
 @for $i from 10 through 32 {
