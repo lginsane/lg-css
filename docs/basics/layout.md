@@ -12,10 +12,10 @@ import 'lg-css/layout.css'
 
 | 类名 | 样式                   |
 | ---- | ---------------------- |
-| .db  | display: block; |
-| .dib | display: inline-block; |
-| .di  | display: inline; |
-| .dn  | display: none; |
+| .block  | display: block; |
+| .inline-block | display: inline-block; |
+| .inline  | display: inline; |
+| .hidden  | display: none; |
 
 #### 2. 浮动
 
@@ -24,6 +24,7 @@ import 'lg-css/layout.css'
 | .fl  | float: left; |
 | .fr  | float: right; |
 | .fn  | float: none; |
+| .clearfix | (清除浮动) |
 
 #### 3. 定位
 
@@ -80,3 +81,10 @@ import 'lg-css/layout.css'
 | .flex-column-center         | display: flex; flex-direction: column; justify-content: center; align-items: center; |
 | .flex-column-between-center | display: flex; flex-direction: column; justify-content: space-between; align-items: center; |
 | .flex-column-around-center  | display: flex; flex-direction: column; justify-content: space-around; align-items: center; |
+
+#### 6. 透明度
+
+| 类名 | 样式          |
+| ---- | ------------- |
+| .opacity-0  | opacity: 0; |
+| .opacity-1  | opacity: 1; |

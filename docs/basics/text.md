@@ -22,7 +22,6 @@ import 'lg-css/text.css'
 | 类名 | 样式                   |
 | ---- | ---------------------- |
 | .underline | text-decoration: underline; |
-| .no-underline  | text-decoration: none; |
 
 #### 3. 字体
 
@@ -30,24 +29,18 @@ import 'lg-css/text.css'
 | ---- | ---------------------- |
 | .i | font-style: italic; |
 | .b  | font-weight: bold; |
-| .ti-2| text-indent: 2em; |
+| .indent-2| text-indent: 2em; |
 
-#### 4. 换行
+#### 4. 溢出隐藏
 
-| 类名 | 样式                   |
-| ---- | ---------------------- |
-| .ellipsis | text-overflow: ellipsis; |
-| .break  | word-break: break-all; |
-| .nowarp| white-space: nowrap; |
-
-- 溢出隐藏
 ```溢出隐藏
-.th1 {
+.ellipsis,
+.ellipsis-1 {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
-.th2 {
+.ellipsis-2 {
     overflow: hidden;
     word-break: break-all;
     text-overflow: ellipsis;
@@ -55,7 +48,7 @@ import 'lg-css/text.css'
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.th3 {
+.ellipsis-3 {
     overflow: hidden;
     word-break: break-all;
     text-overflow: ellipsis;

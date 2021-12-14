@@ -41,6 +41,7 @@
 /* 换行样式
 ------------------------------- */
 
+.ellipsis,
 .ellipsis-1 {
     @include text-no-wrap;
 }
