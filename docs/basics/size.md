@@ -3,15 +3,15 @@
 按需使用
 
 ```按需使用
-import 'lg-css/dist/size/index.css'
+import 'lg-css/dist/size.css'
 or
-import 'lg-css/size/index'
+import 'lg-css/size.css'
 ```
 
 自定义配置
 
 ```自定义配置
-@import "lg-css/src/mixin.scss";
+@import "lg-css/packages/scss/common/mixin.scss";
 // 字体
 $font-size: (40, 50, 60);
 @include customStyle('font-size', $font-size);

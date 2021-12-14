@@ -3,9 +3,9 @@
 按需引入
 
 ```
-import 'lg-css/dist/text/index.css'
+import 'lg-css/dist/text.css'
 or
-import 'lg-css/text/index'
+import 'lg-css/text.css'
 ```
 
 #### 1. 对齐方式
@@ -66,7 +66,10 @@ import 'lg-css/text/index'
 ```
 - 溢出隐藏，更多行处理方案
 ```
-import 'lg-css/src/mixin.scss' // 引入
+import 'lg-css/packages/scss/common/mixin.scss' // 引入
 
-@include text-ellipsis($line); // 使用   $line为行数
+// $line为行数
+.ellipsis-{$line} {
+    @include text-ellipsis($line);
+}
 ```

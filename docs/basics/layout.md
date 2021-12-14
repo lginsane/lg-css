@@ -3,9 +3,9 @@
 按需使用
 
 ```
-import 'lg-css/dist/layout/index.css'
+import 'lg-css/dist/layout.css'
 or
-import 'lg-css/layout/index'
+import 'lg-css/layout.css'
 ```
 
 #### 1. 元素

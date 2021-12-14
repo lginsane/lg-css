@@ -3,9 +3,9 @@
 按需使用
 
 ```
-import 'lg-css/dist/shadow/index.css'
+import 'lg-css/dist/shadow.css'
 or
-import 'lg-css/shadow/index'
+import 'lg-css/shadow.css'
 ```
 
 | 类名           | 样式                                   |

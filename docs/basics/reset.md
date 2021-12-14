@@ -2,7 +2,7 @@
 
 按需使用
 ```
-import 'lg-css/dist/reset/index.css'
+import 'lg-css/dist/reset.css'
 or
-import 'lg-css/reset/index'
+import 'lg-css/reset.css'
 ```
