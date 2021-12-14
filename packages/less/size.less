@@ -1,0 +1,83 @@
+// @fontSize: range(10, 32, 1);
+// @spacing: range(1, 10, 1);
+// @fs-prefix: 'fs';
+// @m-prefix: 'm';
+// @mt-prefix: 'mt';
+// @mb-prefix: 'mb';
+// @ml-prefix: 'mr';
+// @mr-prefix: 'p';
+// @p-prefix: map-get(@paddingMap, 'padding');
+// @pt-prefix: map-get(@paddingMap, 'padding-top');
+// @pb-prefix: map-get(@paddingMap, 'padding-bottom');
+// @pl-prefix: map-get(@paddingMap, 'padding-left');
+// @pr-prefix: map-get(@paddingMap, 'padding-right');
+
+// .generate-columns(@list, @i: 1) when (@i =< length(@list)) {
+//     @val: extract(@list, @i);
+//     .fs-@{val} {
+//         font-size: (@val * 1px);
+//     }
+//     .generate-columns(@list, (@i + 1)) !important;
+// }
+
+// .generate-columns(@fontSize) !important;
+
+// .generate-columns(@fontSize) !important;
+
+.customStyle(@type, @list, @i: 1) when (@i =< length(@list)) {
+    @fs: if(@type = 'font-size', {
+        @val: extract(@list, @i);
+        .fs-@{val} {
+            font-size: (@val * 1px);
+        }
+    },
+    {});
+    @fs();
+    @m: if(@type = 'margin', {
+        @val: extract(@list, @i);
+        .m-@{val} {
+            margin: (@val * 1px);
+        }
+        .mt-@{val} {
+            margin-top: (@val * 1px);
+        }
+        .mb-@{val} {
+            margin-bottom: (@val * 1px);
+        }
+        .ml-@{val} {
+            margin-left: (@val * 1px);
+        }
+        .mr-@{val} {
+            margin-right: (@val * 1px);
+        }
+    },
+    {});
+    @m();
+    @p: if(@type = 'padding', {
+        @val: extract(@list, @i);
+        .p-@{val} {
+            padding: (@val * 1px);
+        }
+        .pt-@{val} {
+            padding-top: (@val * 1px);
+        }
+        .pb-@{val} {
+            padding-bottom: (@val * 1px);
+        }
+        .pl-@{val} {
+            padding-left: (@val * 1px);
+        }
+        .pr-@{val} {
+            padding-right: (@val * 1px);
+        }
+    },
+    {});
+    @p();
+    .customStyle(@type, @list, (@i + 1)) !important;
+}
+@fontSize: range(10, 32, 1);
+@margin: range(1, 10, 1);
+@padding: range(1, 10, 1);
+.customStyle('font-size', @fontSize) !important;
+.customStyle('margin', @margin) !important;
+.customStyle('padding', @padding) !important;
